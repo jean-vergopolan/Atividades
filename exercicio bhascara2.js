@@ -1,4 +1,4 @@
-//exercício 1 - Resolvendo a fórmula de Bháskara
+//exercício 2 - Fórmula de Bháskara com validações
 //autor: Jeanluca Vergopolan
 
 let a = 1
