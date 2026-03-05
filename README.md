@@ -1,11 +1,13 @@
-Projeto Rocket Program 2026 - Curitiba
+Olá visitante! （￣︶￣）↗　
 
-Aluno: Jeanluca Vergopolan
+Aqui nestas pastas você vai encontrar minhas atividades no Rocket Program (Edição Sul - 2026) da Alpar tecnologia. Estão separadas em pastas por temas abordados no curso.
 
-Projetos:
+Eu: Jeanluca Vergopolan
 
-Link Portfólio:
+Aqui alguns links para acessar e verificar o resultado de alguns códigos:
 
-Link Cardápio:
+Link do meu Portfólio: 
 
-Link
+Link do cardápio da cafeteria com temática de dogs: 
+
+Link do 
