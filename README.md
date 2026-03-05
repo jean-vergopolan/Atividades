@@ -6,8 +6,8 @@ Eu: Jeanluca Vergopolan
 
 Aqui alguns links para acessar e verificar o resultado de alguns códigos:
 
-Link do meu Portfólio: 
+Link do meu Portfólio: https://jean-vergopolan.github.io/Atividades/HTML_CSS/portfolio/index.html
 
-Link do cardápio da cafeteria com temática de dogs: 
+Link do cardápio da cafeteria com temática de dogs: https://jean-vergopolan.github.io/Atividades/HTML_CSS/cafeteria/index.html
 
 Link do 
