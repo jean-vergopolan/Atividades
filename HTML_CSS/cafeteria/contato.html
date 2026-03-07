@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato cafeteria Cafécão</title>
+</head>
+<body>
+    <h1>Envie para nós sua sugestão, reclamação ou elogio!</h1>
+    <form>
+        <label>
+            <p>Qual seu nome?</p>
+            <input name="nome" type="text" placeholder="ex: Rex da silva" required>
+        </label><br>
+        <label>
+            <p>Qual seu e-mail?</p>
+            <input type="email" name="email" placeholder="ex: cachorrão@auau.com" required>
+        </label>
+        <label>
+            <p>Qual seu telefone?</p>
+            <input type="tel" name="telefone" placeholder="ex: 41 91234-5678">
+        </label>
+        <label>
+            <p>Qual o assunto do contato?</p>
+            <select required>
+                <option value="">Selecione</option>
+                <option value="sugestão">Sugestão</option>
+                <option value="reclamacao">Reclamação</option>
+                <option value="elogio">Elogio</option>
+                <option value="outros">Outro</option>
+            </select>
+        </label>
+        <label>
+            <p>Digite sua mensagem para nós:</p>
+            <textarea required></textarea>
+        </label>
+        <button type="submit">Enviar</button>
+
+    </form>
+</body>
+</html>
