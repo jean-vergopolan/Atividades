@@ -1,0 +1,62 @@
+body {
+    background-image: url(floresta.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pokedex {
+    text-align: center;
+    align-items: center;
+}
+
+.titulo {
+    font-family: fantasy;
+    color: #beb9b9b9;
+}
+
+.gifguerreiro {
+    margin: 150px auto 0;
+
+}
+
+.caixapergaminho {
+    position: absolute;
+    top: 15%;
+    right:1px;
+    transform: translate(-20%);
+    z-index: 10;
+}
+
+.pergaminho {
+    width: 400px;
+    height: 500px;
+    background-image: url(fechado.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descricao {
+    display: none;
+    font-family: Georgia, 'serif';
+    padding: 20px;
+    font-size: 14px;
+    color: #4a2c1d;
+    text-align: center;
+}
+
+.pergaminho:hover {
+    width: 400px;
+    height: 500px;
+    background-image: url(aberto.png);
+    padding: 20px;
+
+}
+
+.pergaminho:hover .descricao {
+    display: block;
+}
