@@ -6,10 +6,10 @@ Eu: Jeanluca Vergopolan
 
 Aqui alguns links para acessar e verificar o resultado de alguns códigos:
 
-Link do meu Portfólio: https://jean-vergopolan.github.io/Atividades/html_css/index.html
+Link do meu Portfólio: https://jean-vergopolan.github.io/Atividades/HTML_CSS/index.html
 
-Link do cardápio da cafeteria com temática de dogs: https://jean-vergopolan.github.io/Atividades/html_css/cafeteria/index.html
+Link do cardápio da cafeteria com temática de dogs: https://jean-vergopolan.github.io/Atividades/HTML_CSS/cafeteria/index.html
 
-Link da Pokedex com classes do rpg D&d 5e: https://jean-vergopolan.github.io/Atividades/html_css/pokedex/index.html
+Link da Pokedex com classes do rpg D&d 5e: https://jean-vergopolan.github.io/Atividades/HTML_CSS/pokedex/index.html
 
 
