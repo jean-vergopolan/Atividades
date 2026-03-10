@@ -3,24 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poedex de classes dnd</title>
+    <title>POKEDEX</title>
     <link rel="stylesheet" href="./assets/estilo.css">
 </head>
 <body>
     
     <div class="pokedex">
-        <h1 class="titulo">Classes de Dungeons and Dragons 5ºe</h1>
-            <div class="guerreiro"> 
-                <img src="./assets/guerreiro.gif" alt="gif de um guerreiro" width="25%" class="gifguerreiro">
-            </div>
+        <h1 id="titulo">Classes de RPG (D&D 5e)</h1>
+
+        <div class="caixapesquisa">
+            <input type="text" id="pesquisa" placeholder="_______Pesquisar______">
+        </div>
+
+        <div class="meio">
+                <button id="anterior" class="seta">
+                    <img src="./assets/esquerda.png" alt="uma seta apontando para o lago esquerdo(anterior)">
+                </button>
+
+                <div class="guerreiro"> 
+                    <img src="./assets/guerreiro.gif" alt="gif de um guerreiro" id="personagem-gif">
+                </div>
+
+                <button id="proxima" class="seta">
+                    <img src="./assets/direita.png" alt="uma seta apontando para o lado direito(próximo)">
+                </button>
         </div>
 
         <div class="caixapergaminho">
             <div class="pergaminho">
-                <p class="descricao">GUERREIROS<br>guerreiros são a classe combatente</p>
+                <p class="descricao" id="textoDescricao">GUERREIRO: Cavaleiros em missões, lordes conquistadores, campeões reais, infantaria de elite, mercenários rígidos e bandidos reis. Todos esses são guerreiros, talvez a mais diversificada classe de personagens nos mundos de, DUNGEONS & DRAGONS. Como guerreiros, eles compartilham de uma maestria com armas e armaduras sem precedentes, bem como um vasto conhecimento e habilidades em combate. E eles estão bem familiarizados com a morte, seja simplesmente conhecendo-a ou desafiando-a cara a cara..</p>
             </div>
         </div>
+
     </div>
-    
+    <script src="pokedex.js"></script>
 </body>
 </html>
