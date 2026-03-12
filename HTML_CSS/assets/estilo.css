@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+body {
+    background-image: url(./images/urso.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tudo {
+    display: flex;
+    justify-content: space-between;
+}
+
+#quemsoueu {
+    width: 170px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.caixaquemsoueu {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.caixaquemsoueu:hover {
+    transform: scale(1.1);
+}
+
+.caixameusprojetos {
+    display: inline-block;
+    margin-right: 230px;
+}
+
+#meusprojetos {
+    color: #4a3c31;
+    font-family: "Patua one", serif;
+}
+
+.projetos {
+    width: 100px;
+}
+
+.projetos:hover {
+    scale: 1.1;
+}
+
+.pergaminho {
+    width: 400px;
+}
