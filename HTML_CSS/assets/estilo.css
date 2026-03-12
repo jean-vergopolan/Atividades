@@ -4,6 +4,7 @@ body {
     background-image: url(./images/urso.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #4a3c31;
 }
 
 .tudo {
@@ -12,18 +13,29 @@ body {
 }
 
 #quemsoueu {
-    width: 170px;
+    width: 200px;
     margin-left: 10px;
     margin-top: 10px;
 }
 
 .caixaquemsoueu {
     display: inline-block;
-    transition: transform 0.2s ease;
+    transition: transform 0.4s ease;
+    cursor: pointer;
 }
 
 .caixaquemsoueu:hover {
     transform: scale(1.1);
+}
+
+.caixaquemsoueu:hover .quemsoueuaberto {
+    display: block;
+}
+
+.quemsoueuaberto {
+    display: none;
+    position: absolute;
+    width: 330px;
 }
 
 .caixameusprojetos {
@@ -40,10 +52,31 @@ body {
     width: 100px;
 }
 
+#padrao {
+    position: absolute;
+    top: 40%;
+    right: 1%;
+    font-family: "Patua one", serif;
+    color: #4a3c31;
+    width: 200px;
+    font-size: larger;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
 .projetos:hover {
     scale: 1.1;
 }
 
+.caixapergaminho {
+    position: relative;
+    display: inline-block;
+}
+
 .pergaminho {
     width: 400px;
+}
+
+#bussola {
+    width: 50px;
 }
