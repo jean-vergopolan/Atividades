@@ -4,6 +4,7 @@ body {
     background-image: url(floresta.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgb(68, 216, 68);
 }
 
 .pokedex {

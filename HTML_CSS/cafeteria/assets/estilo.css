@@ -1,3 +1,5 @@
 body {
-    background-color: #e3d5c1;;
+    background-color: #e3d5c1;
+    background-image: url(./fundo.png);
+    background-size:contain;
 }
