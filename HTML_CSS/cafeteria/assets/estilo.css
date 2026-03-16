@@ -1,5 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Patua+One&display=swap');
+
+.menu {
+    position: sticky;
+    top: 0;
+    background-color: #5a3b1b;
+    z-index: 999;
+    padding: 5px 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    margin-bottom: 0px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 3px;
+    padding: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #cbb08b;
+}
+
 body {
-    background-color: #e3d5c1;
-    background-image: url(./fundo.png);
+    background-color: #cbb08b;
+    background-image: url(./images/fundo.png);
     background-size:contain;
+}
+
+table {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    text-align: center;
+
+}
+
+.tudo {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgb(234, 211, 167);
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+li {
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: 'Nunito', sans-serif;
+}
+
+li li ::before {
+    content: "⚠ ";
+}
+
+.imagem {
+    width: 600px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ;
+}
+
+.imagem:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-family: 'Patua One', monospace;
+    color: #5a3e1b;
+    font-size: 60px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 10px;
+
+} 
+
+h2 {
+    font-family: 'Patua One', monospace;
+    color: white;
+    background-color: #5a3b1e;
+    padding: 10px, 40px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    color: #5a3e1b;
+    line-height: 1.6;
+}
+
+.item-cardapio {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    gap: 40px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1.5px dashed #5a3b1e;
+}
+
+.item-cardapio:last-child {
+    border-bottom: none;
+}
+
+.foto-alimento {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    object-fit: cover;
+    flex-shrink: 0;
 }
