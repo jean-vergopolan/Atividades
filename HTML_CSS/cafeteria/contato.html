@@ -4,38 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato cafeteria Cafécão</title>
+    <link rel="stylesheet" href="./assets/estilo.css">
 </head>
 <body>
-    <h1>Envie para nós sua sugestão, reclamação ou elogio!</h1>
-    <form>
-        <label>
-            <p>Qual seu nome?</p>
-            <input name="nome" type="text" placeholder="ex: Rex da silva" required>
-        </label><br>
-        <label>
-            <p>Qual seu e-mail?</p>
-            <input type="email" name="email" placeholder="ex: cachorrão@auau.com" required>
-        </label>
-        <label>
-            <p>Qual seu telefone?</p>
-            <input type="tel" name="telefone" placeholder="ex: 41 91234-5678">
-        </label>
-        <label>
-            <p>Qual o assunto do contato?</p>
-            <select required>
-                <option value="">Selecione</option>
-                <option value="sugestão">Sugestão</option>
-                <option value="reclamacao">Reclamação</option>
-                <option value="elogio">Elogio</option>
-                <option value="outros">Outro</option>
-            </select>
-        </label>
-        <label>
-            <p>Digite sua mensagem para nós:</p>
-            <textarea required></textarea>
-        </label>
-        <button type="submit">Enviar</button>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html"><-- Voltar para o Cardápio</a></li> 
+        </ul>
+    </nav>
 
-    </form>
+    <div class="tudo">
+        <h1 class="titulo">Fale com a gente!</h1>
+        <p>Envie para nós sua sugestão, reclamação, elogio ou foto do seu doguinho.</p>
+        
+        <form class="formulario">
+            <div class="campo">
+                <label for="nome">Qual seu nome?</label>
+                <input id="nome" name="nome" type="text" placeholder="ex: Rex da Silva" required>
+            </div>
+            
+            <div class="campo">
+                <label for="email">Qual seu e-mail?</label>
+                <input id="email" type="email" name="email" placeholder="ex: cachorrao@auau.com" required>
+            </div>
+            
+            <div class="campo">
+                <label for="telefone">Qual seu telefone?</label>
+                <input id="telefone" type="tel" name="telefone" placeholder="ex: 41 91234-5678">
+            </div>
+            
+            <div class="campo">
+                <label for="assunto">Qual o assunto do contato?</label>
+                <select id="assunto" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="sugestão">Sugestão</option>
+                    <option value="reclamacao">Reclamação</option>
+                    <option value="elogio">Elogio</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+            
+            <div class="campo">
+                <label for="mensagem">Digite sua mensagem para nós:</label>
+                <textarea id="mensagem" placeholder="Escreva aqui..." required></textarea>
+            </div>
+            
+            <button type="submit" class="botaocontato" style="border: none; cursor: pointer; width: 100%; margin-top: 10px;">Enviar Mensagem</button>
+        </form>
+    </div>
 </body>
-</html>

@@ -33,6 +33,13 @@
     color: #cbb08b;
 }
 
+.divisor {
+    border-left: 2px solid #cbb08b;
+    padding-left: 30px;
+    height: 20px;
+    margin: 0 15px;
+}
+
 body {
     background-color: #cbb08b;
     background-image: url(./images/fundo.png);
@@ -40,10 +47,32 @@ body {
 }
 
 table {
-    border: 1px solid #000;
+    width: 80%;
+    margin: 0 auto;
     border-collapse: collapse;
-    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
 
+th, td {
+    padding: 15px, 10px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    vertical-align: center;
+    font-family: 'Nunito', sans-serif;
+    color: #5a3e1b;
+}   
+
+thead th {
+    background-color: #5a3b1e;
+    color: white;
+    font-size: 15px;
+    font-family: patua one, monospace;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .tudo {
@@ -124,4 +153,67 @@ p {
     transition: transform 0.2s;
     object-fit: cover;
     flex-shrink: 0;
+}
+
+.botaocontato {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #5a3b1e;
+    color: white;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 50px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.botaocontato:hover {
+    background-color: #cbb08b;
+    color: #5a3b1e;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo input, 
+.campo select, 
+.campo textarea {
+    padding: 15px;
+    border: 2px solid rgba(90, 62, 27, 0.3); 
+    border-radius: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #5a3e1b;
+    transition: all 0.3s ease;
+}
+
+.campo textarea {
+    height: 120px;
+    resize: vertical; 
+}
+
+.campo input:focus, 
+.campo select:focus, 
+.campo textarea:focus {
+    outline: none;
+    border-color: #5a3b1e;
+    background-color: white; 
+    box-shadow: 0 0 10px rgba(90, 62, 27, 0.2); 
 }
