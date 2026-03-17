@@ -7,18 +7,45 @@
     <link rel="stylesheet" href="./assets/estilo.css">
 </head>
 <body>
-    <h1>Podcast Curiosiando a vida</h1>
-    <p>Bem-vindo ao nosso podcast! Aqui, exploramos curiosidades sobre a vida, o universo e tudo mais. Fique ligado para episódios interessantes e divertidos!</p>
-    <p>Nosso podcast é perfeito para quem gosta de aprender coisas novas e se divertir ao mesmo tempo. Não perca nossos episódios semanais!</p>
-    <p> Trailer do nosso podcast: </p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/HqpM9v5WfMo?si=Ea3XPkYgCJIAiGj9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
-    <h2> Episódio 1: O Urso</h2>
-    <audio controls>
-        <source src="./assets/audio/urso.ogg" type="audio/ogg">
-    </audio> <br>
-    <h2> Episódio 2: A preguiça</h2>
-    <audio controls>
-        <source src="./assets/audio/preguica.ogg" type="audio/ogg">
-    </audio> <br>
+    <div class="paralax"></div>
+    <div class="tudo">
+        <header class="menu">
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Episódios</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="ola">
+                <h1>Podcast Curiosiando a vida</h1>
+                    <p>Bem-vindo ao nosso podcast! Aqui, exploramos curiosidades sobre a vida, o universo e tudo mais. Fique ligado para episódios interessantes e divertidos!</p>
+                    <p>Nosso podcast é perfeito para quem gosta de aprender coisas novas e se divertir ao mesmo tempo. Não perca nossos episódios semanais!</p>
+                    <h2> Trailer do nosso podcast: </h2>
+            </section>
+            <section class="trailer">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HqpM9v5WfMo?si=Ea3XPkYgCJIAiGj9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+            </section>
+            <section class="episodios">
+                <div class="caixaepisodio">
+                    <h1> Episódios </h1>
+                    <h2> Episódio 1: O Urso</h2>
+                    <audio controls>
+                        <source src="./assets/audio/urso.ogg" type="audio/ogg">
+                    </audio> <br>
+                </div>
+                <div class="caixaepisodio">
+                    <h2> Episódio 2: A preguiça</h2>
+                    <audio controls>
+                        <source src="./assets/audio/preguica.ogg" type="audio/ogg">
+                    </audio> <br>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
