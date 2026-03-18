@@ -88,3 +88,35 @@ body {
     background-image: url(./images/oo.gif);
     background-size: cover;
 }
+
+.caixabussola {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.caixabussola:hover {
+    transform: scale(1.1);
+}
+
+.caixabussola:hover #bussola {
+    display: none;
+}
+
+.caixabussola:hover .bussolaaberta {
+    display: block;
+}
+
+#bussola {
+    width: 100px;
+    display: block;
+}
+
+.bussolaaberta {
+    display: none;
+    width: 230px;
+    display: none;
+}

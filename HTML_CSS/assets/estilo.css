@@ -19,6 +19,8 @@ body {
 }
 
 .caixaquemsoueu {
+    align-self: flex-start;
+    height: max-content;
     display: inline-block;
     transition: transform 0.4s ease;
     cursor: pointer;
@@ -77,6 +79,34 @@ body {
     width: 400px;
 }
 
+.caixabussola {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.caixabussola:hover {
+    transform: scale(1.1);
+}
+
+.caixabussola:hover #bussola {
+    display: none;
+}
+
+.caixabussola:hover .bussolaaberta {
+    display: block;
+}
+
 #bussola {
-    width: 50px;
+    width: 100px;
+    display: block;
+}
+
+.bussolaaberta {
+    display: none;
+    width: 230px;
+    display: none;
 }

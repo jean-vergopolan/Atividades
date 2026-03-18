@@ -217,3 +217,35 @@ p {
     background-color: white; 
     box-shadow: 0 0 10px rgba(90, 62, 27, 0.2); 
 }
+
+.caixabussola {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.caixabussola:hover {
+    transform: scale(1.1);
+}
+
+.caixabussola:hover #bussola {
+    display: none;
+}
+
+.caixabussola:hover .bussolaaberta {
+    display: block;
+}
+
+#bussola {
+    width: 100px;
+    display: block;
+}
+
+.bussolaaberta {
+    display: none;
+    width: 230px;
+    display: none;
+}
