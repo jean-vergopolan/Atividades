@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa da fortaleza</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="painel-controle">
+        <h1>Controle da Fortaleza</h1>
+        <p id="mensagem-status">Sistema iniciado. Tudo no escuro.</p>
+        
+        <div class="controles">
+            <button data-comodo="sala">Ligar/Desligar Sala</button>
+            <button data-comodo="quarto">Ligar/Desligar Quarto</button>
+            <button data-comodo="cozinha">Ligar/Desligar Cozinha</button>
+        </div>
+    </div>
+
+    <div class="mapa-container">
+        <div class="casa-planta">
+            <div id="sala" class="comodo sala">
+                <span class="nome-comodo">Sala Principal</span>
+            </div>
+            <div id="quarto" class="comodo quarto">
+                <span class="nome-comodo">Quarto</span>
+            </div>
+            <div id="cozinha" class="comodo cozinha">
+                <span class="nome-comodo">Cozinha</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

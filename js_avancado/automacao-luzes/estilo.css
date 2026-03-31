@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #1a1512;
+    background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    color: #e0d5c1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: 'MedievalSharp', cursive;
+    color: #d4af37;
+    margin-bottom: 5px;
+    font-size: 2.5rem;
+}
+
+.painel-controle {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px;
+    border-radius: 8px;
+    border: 1px solid #3e2723;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+#mensagem-status {
+    font-size: 1.1rem;
+    color: #a09e9a;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.controles {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #3e2723;
+    color: #d4af37;
+    border: 2px solid #5d4037;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background-color: #5d4037;
+    color: #fff;
+}
+
+.mapa-container {
+    background-color: #d4c4a8;
+    background-image: url('https://www.transparenttextures.com/patterns/old-map.png');
+    padding: 30px;
+    border-radius: 10px;
+    border: 5px solid #2d1c15;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8), inset 0 0 50px rgba(100, 70, 40, 0.3);
+}
+
+.casa-planta {
+    display: grid;
+    grid-template-columns: 250px 200px;
+    grid-template-rows: 200px 150px;
+    gap: 10px;
+    background-color: #4a3b32;
+    border: 10px solid #4a3b32;
+}
+
+.comodo {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.nome-comodo {
+    font-family: 'MedievalSharp', cursive;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    pointer-events: none;
+    transition: color 0.5s ease;
+}
+
+.sala {
+    grid-column: 1 / 3;
+}
+.quarto {
+    grid-column: 1 / 2;
+}
+.cozinha {
+    grid-column: 2 / 3;
+}
+
+.comodo.luz-ligada {
+    background-color: rgba(255, 140, 0, 0.15);
+    box-shadow: inset 0 0 60px rgba(255, 120, 0, 0.8);
+}
+
+.comodo.luz-ligada .nome-comodo {
+    color: rgba(255, 220, 150, 0.9);
+    text-shadow: 0 0 10px rgba(255, 100, 0, 0.8);
+}
