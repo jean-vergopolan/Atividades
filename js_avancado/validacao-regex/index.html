@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Validação de Formulário</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <div class="contentor">
+        <h2>O incrível site de validação de Dados</h2>
+        
+        <form id="formularioValidacao">
+            <div class="campo">
+                <label>Valide seu Nome:</label>
+                <input type="text" id="campoNome">
+                <small class="dica">* Digite  apenas letras e espaços</small>
+                <span id="erroNome" class="mensagem"></span>
+            </div>
+
+            <div class="campo">
+                <label>Valide seu Email:</label>
+                <input type="text" id="campoEmail">
+                <small class="dica">*Exemplo: seunome@email,com</small>
+                <span id="erroEmail" class="mensagem"></span>
+            </div>
+
+            <div class="campo">
+                <label>Valide seu CPF:</label>
+                <input type="text" id="campoCpf" placeholder="000.000.000-00">
+                <small class="dica">* Digite com a pontuação: 000.000.000-00</small>
+                <span id="erroCpf" class="mensagem"></span>
+            </div>
+
+            <button type="submit">Validar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
