@@ -41,6 +41,10 @@ body {
     display: flex;
 }
 
+h1 {
+    text-align: center;
+}
+
 .icon {
     width: 12.8rem;
     height: 12.8rem;
@@ -101,11 +105,11 @@ body {
     -webkit-backdrop-filter: blur(5px);
     padding: 1.6rem;
     border-radius: 1.6rem 0 0 1.6rem;
-    color: #fff;
+    color: #000000;
 }
 
 .input input::placeholder {
-    color: #fff;
+    color: #000000a1;
     opacity: 0.8;
 }
 
@@ -128,4 +132,36 @@ body {
 
 .input button:active {
     background-color: rgb(176, 74, 37);
+}
+
+.caixabussola {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.caixabussola:hover {
+    transform: scale(1.1);
+}
+
+.caixabussola:hover #bussola {
+    display: none;
+}
+
+.caixabussola:hover .bussolaaberta {
+    display: block;
+}
+
+#bussola {
+    width: 60px;
+    display: block;
+}
+
+.bussolaaberta {
+    display: none;
+    width: 130px;
+    display: none;
 }

@@ -1,43 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html ng-app="weatherApp" lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Previsão</title>
+    <title>Clima</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/previsao.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
-<body>
-    <section class="card">
-        <img class="icon" src="https://openweathermap.org/img/wn/03d@4x.png" alt="clouds">
+<body ng-controller="WeatherController">
+    <section class="card" ng-class="{'active': cardActive}">
+        <img 
+        ng-if="iconUrl"
+        class="icon" 
+        src={{iconUrl}} 
+        alt="clouds">
         
-        <h2>26°</h2>
+        <h2>{{temperature}}°C</h2>
         
-        <p class="feels-like">Sensação térmica de <span>28°</span></p>
+        <p class="feels-like">Sensação térmica de <span>{{feelsLike}}°C</span></p>
         
         <div class="min-max">
-            <p>Min: <span class="min">26</span>°</p>
-            <p>Max: <span class="max">27</span>°</p>
+            <p>Min: <span class="min">{{minTemperature}}°C</span></p>
+            <p>Max: <span class="max">{{maxTemperature}}°C</span></p>
         </div>
         
-        <p class="humidity">Umidade: <span>65</span>%</p>
+        <p class="humidity">Umidade: <span>{{humidity}}%</span></p>
         
         <div class="wind">
-            <img src="./assets/images/arrow.png" alt="Uma seta que representa a direção do vento">
+            <img 
+            ng-style="{'transform': 'rotate('+windOrientation+'deg)'}" 
+            src="./assets/images/arrow.png" alt="Uma seta que representa a direção do vento">
             <p>
                 Velocidade do vento:
-                <span>1.54m/s</span>
+                <span>{{windVelocity}}m/s</span>
             </p>
         </div>  
     </section>
 
     <section class="input">
-        <input type="text" placeholder="Busque uma cidade">
-        <button type="button">Buscar</button>
+        <input type="text" placeholder="Busque uma cidade" ng-model="city">
+        <button type="button" ng-click="callApi()">Buscar</button>
     </section>
 
-    <script src="./assets/previsao.js"></script>
+    <div class="caixabussola">
+    <a href="https://jean-vergopolan.github.io/Atividades/HTML_CSS/index.html">
+        <img src="./assets/images/bussola.png" alt="bussola" id="bussola">
+        <img src="./assets/images/bussolaaberta.png" alt="clique aqui para voltar ao portfólio" class="bussolaaberta">
+    </a>
+</div>
+
+    <script src="./assets/main.js"></script>
 </body>
 </html>

@@ -9,11 +9,16 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
 
+
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #202020;
             color: #f1c40f;
             padding: 30px;
+            background-image: url('capa.jpeg');
+            background-size: cover;
+            background-position: center;
         }
 
         h1 {
@@ -102,6 +107,39 @@
             border: 1px dashed #8b0000;
             padding: 10px;
         }
+
+                .caixabussola {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999;
+            transition: transform 0.4s ease;
+            cursor: pointer;
+        }
+
+        .caixabussola:hover {
+            transform: scale(1.1);
+        }
+
+        .caixabussola:hover #bussola {
+            display: none;
+        }
+
+        .caixabussola:hover .bussolaaberta {
+            display: block;
+        }
+
+        #bussola {
+            width: 100px;
+            display: block;
+        }
+
+        .bussolaaberta {
+            display: none;
+            width: 230px;
+            display: none;
+        }
+
     </style>
 </head>
 <body ng-controller="ControladorMatricula">
@@ -188,6 +226,15 @@
         </div>
 
     </div>
+
+    <div class="caixabussola">
+    <a href="https://jean-vergopolan.github.io/Atividades/HTML_CSS/index.html">
+        <img src="./bussola.png" alt="bussola" id="bussola">
+        <img src="./bussolaaberta.png" alt="clique aqui para voltar ao portfólio" class="bussolaaberta">
+    </a>
+</div>
+
+
 
 </body>
 </html>
