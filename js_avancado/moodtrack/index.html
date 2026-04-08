@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt" ng-app="diarioNave">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de Bordo - MoodTrack</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="./assets/estilo.css">
+</head>
+
+<body ng-controller="PainelController as ctrl">
+
+    <section id="tela-espaco" class="tela ativa">
+        <div class="container-universo">
+            <img src="./assets/images/rocket.png" alt="Nave Espacial" id="nave" class="nave">
+        </div>
+    </section>
+
+    <section id="tela-central" class="tela oculta">
+        <div class="container-sala">
+            <img src="./assets/images/central.png" alt="Sala Central" class="fundo-sala">
+            
+            <img src="./assets/images/among.jpg" id="astronauta" alt="Astronauta">
+            
+            <div class="area-interativa porta-esq">
+                <div class="tooltip-imagem">
+                    <img src="./assets/images/reactorroom.jpg" alt="Sala do Reator">
+                    <span>Motores/Reator</span>
+                </div>
+            </div>
+
+            <div class="area-interativa porta-dir">
+                <div class="tooltip-imagem">
+                    <img src="./assets/images/navegacao.png" alt="Sala de Navegação">
+                    <span>Navegação</span>
+                </div>
+            </div>
+
+            <div class="area-interativa painel-computador" id="botao-computador">
+                <div class="tooltip">Aceder ao Sistema</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tela-computador" class="tela oculta">
+        <div class="borda-monitor">
+            <div class="tela-interna among-us-theme">
+                
+               <div class="cabecalho-sistema">
+                    <h1>SISTEMA DE SUPORTE À VIDA (DIÁRIO DE BORDO)</h1>
+                    <button id="botao-voltar" class="btn-amongus btn-red">FECHAR SISTEMA</button>
+                </div>
+
+                <div class="mensagem-missao">
+                    <strong>⚠️ TRANSMISSÃO OFICIAL DO COMANDO ESTELAR ⚠️</strong>
+                    <p>Saudações, Tripulante! Você está em uma missão crítica de exploração no espaço profundo. Este Terminal é o seu Diário de Bordo oficial. Para garantir a segurança da nave e da tripulação, é obrigatório registrar diariamente o seu status emocional e reportar a conclusão das suas missões (Tasks). Lembre-se: a nossa sobrevivência depende da sua rotina. Cuidado com os impostores e bom trabalho!</p>
+                </div>
+                <div class="layout-grid">
+                    <div class="painel-modulo">
+                        <h2>NOVO REGISTO</h2>
+                        <form ng-submit="ctrl.salvarRegistro()">
+                            
+                            <div class="form-group">
+                                <label>DATA TERRESTRE:</label>
+                                <input type="date" ng-model="ctrl.novoRegistro.data" required class="input-amongus">
+                            </div>
+
+                            <div class="form-group">
+                                <label>NÍVEL DE HUMOR DO TRIPULANTE:</label>
+                                <div class="humor-opcoes">
+                                    <label class="radio-amongus" ng-repeat="humor in ctrl.niveisHumor">
+                                        <input type="radio" name="humor" ng-model="ctrl.novoRegistro.humor" ng-value="humor.valor" required>
+                                        <span>{{humor.emoji}} {{humor.texto}}</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>TAREFAS:</label>
+                                <div class="habitos-lista">
+                                    <label class="check-amongus" ng-repeat="habito in ctrl.novoRegistro.habitos">
+                                        <input type="checkbox" ng-model="habito.concluido">
+                                        <span>{{habito.nome}}</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="task-progress-container">
+                                <label>TOTAL TASKS COMPLETED ({{ctrl.calcularProgresso() | number:0}}%)</label>
+                                <div class="task-progress-bar">
+                                    <div class="task-progress-fill" ng-style="{'width': ctrl.calcularProgresso() + '%'}"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="margin-top: 15px;">
+                                <label>RELATÓRIO DA MISSÃO (OBSERVAÇÃO):</label>
+                                <textarea ng-model="ctrl.novoRegistro.observacao" class="input-amongus textarea-amongus" placeholder="O que aconteceu hoje?"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-amongus btn-green" style="margin-top: 15px;">GUARDAR REGISTO</button>
+                        
+                        </form>
+                    </div>
+
+                    <div class="painel-modulo">
+                        <h2>ARQUIVO DE REGISTOS</h2>
+                        
+                        <div class="indicador-humor" ng-if="ctrl.registros.length > 0">
+                            <strong>Status Emocional Recente:</strong>
+                            <span class="emoji-line">
+                                <span ng-repeat="emoji in ctrl.getHumorRecente() track by $index">{{emoji}}</span>
+                            </span>
+                        </div>
+
+                        <div class="filtros-box">
+                            <input type="date" ng-model="ctrl.filtroData" class="input-amongus input-sm" title="Filtrar por data">
+                            <select ng-model="ctrl.filtroHumor" class="input-amongus input-sm">
+                                <option value="">Todos os Humores</option>
+                                <option ng-repeat="humor in ctrl.niveisHumor" value="{{humor.valor}}">{{humor.emoji}} {{humor.texto}}</option>
+                            </select>
+                            <button type="button" class="btn-amongus btn-blue btn-sm" ng-click="ctrl.limparFiltros()">LIMPAR</button>
+                        </div>
+
+                        <div class="lista-registros">
+                            <div class="registro-card" ng-repeat="registro in ctrl.registros | filter:ctrl.filtrarRegistros">
+                                <div class="registro-header">
+                                    <span class="data">{{registro.data | date:'dd/MM/yyyy'}}</span>
+                                    <span class="humor">{{ctrl.getEmoji(registro.humor)}}</span>
+                                </div>
+                                <div class="registro-habitos">
+                                    <strong>Tarefas:</strong>
+                                    <ul>
+                                        <li ng-repeat="hab in registro.habitos" ng-class="{'concluido': hab.concluido}">
+                                            {{hab.concluido ? '✅' : '❌'}} {{hab.nome}}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="registro-obs" ng-if="registro.observacao">
+                                    <strong>Relatório:</strong> {{registro.observacao}}
+                                </div>
+                            </div>
+                            <p ng-if="ctrl.registros.length === 0" class="texto-vazio">Nenhum registo encontrado na base de dados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
